@@ -11,7 +11,7 @@ const verifyAdmin = (req, res, next) => {
 
   // Admin access check for edit/write operations (POST, PUT, DELETE) or admin endpoints
   const authHeader = req.headers.authorization;
-  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  const adminPassword = process.env.ADMIN_PASSWORD || 'samejo@2005';
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return res.status(401).json({
